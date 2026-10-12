@@ -180,6 +180,66 @@
   .checkout-btn{width:100%;background:#25D366;color:#fff;border:none;padding:15px 0;border-radius:4px;font-size:0.92rem;font-weight:500;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px;}
   .checkout-alt{width:100%;background:none;border:1px solid var(--dark);padding:13px 0;border-radius:4px;font-size:0.85rem;}
 
+
+  /* REVIEWS */
+  .reviews{background:var(--cream);}
+  .rev-layout{display:grid;grid-template-columns:310px 1fr;gap:40px;align-items:start;}
+  .rev-summary{background:#fff;border:1px solid var(--line);border-radius:10px;padding:32px 28px;text-align:center;position:sticky;top:110px;}
+  .rev-avg{font-family:'Playfair Display',serif;font-size:3.6rem;line-height:1;color:var(--dark);margin-bottom:8px;}
+  .rev-count{font-size:0.85rem;color:#7a6f5b;margin:8px 0 20px;}
+  .stars{position:relative;display:inline-block;color:#d8cbb0;letter-spacing:2px;line-height:1;white-space:nowrap;font-size:1.15rem;}
+  .stars::before{content:'\2605\2605\2605\2605\2605';}
+  .stars .fill{position:absolute;left:0;top:0;overflow:hidden;color:var(--gold);}
+  .stars .fill::before{content:'\2605\2605\2605\2605\2605';}
+  .rev-bars{margin:0 0 24px;text-align:left;}
+  .rev-bar{display:flex;align-items:center;gap:10px;font-size:0.78rem;color:#6b604d;margin-bottom:7px;}
+  .rev-bar .lab{width:26px;}
+  .rev-bar .track{flex:1;height:6px;background:var(--cream2);border-radius:3px;overflow:hidden;}
+  .rev-bar .track i{display:block;height:100%;background:var(--gold);}
+  .rev-bar .n{width:22px;text-align:right;}
+  .rev-summary .btn-primary{width:100%;}
+
+  .rev-notice{font-size:0.8rem;background:#fff6dc;border:1px solid var(--gold-light);color:#6b4f12;padding:11px 14px;border-radius:4px;margin-bottom:18px;}
+  .rev-msg{font-size:0.9rem;padding:13px 16px;border-radius:4px;margin-bottom:18px;}
+  .rev-msg:empty{display:none;}
+  .rev-msg.ok{background:#eef5ea;border:1px solid #b8d2ae;color:#2f5424;}
+  .rev-msg.err{background:#fbecea;border:1px solid #e3b4ae;color:#8a2f25;}
+
+  .rev-form{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;margin-bottom:30px;display:none;}
+  .rev-form.open{display:block;}
+  .rev-form h3{font-size:1.45rem;margin-bottom:4px;}
+  .rev-form .hint{font-size:0.82rem;color:#7a6f5b;margin-bottom:20px;}
+  .field{margin-bottom:16px;}
+  .field .lbl{display:block;font-size:0.82rem;margin-bottom:6px;color:var(--ink);font-weight:500;}
+  .field input[type=text],.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid rgba(36,26,16,0.25);border-radius:3px;background:var(--cream);font-family:'Jost',sans-serif;font-size:0.95rem;font-weight:400;color:var(--ink);}
+  .field textarea{min-height:120px;resize:vertical;}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--gold);outline-offset:1px;}
+  .field .count{font-size:0.74rem;color:#8a7f6d;text-align:right;margin-top:4px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .star-input{display:inline-flex;flex-direction:row-reverse;gap:2px;position:relative;}
+  .star-input input{position:absolute;opacity:0;width:1px;height:1px;}
+  .star-input label{font-size:2rem;line-height:1;color:#d8cbb0;cursor:pointer;transition:color .15s;}
+  .star-input label:hover,.star-input label:hover ~ label,.star-input input:checked ~ label{color:var(--gold);}
+  .star-input input:focus-visible + label{outline:2px solid var(--gold);outline-offset:2px;}
+  .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+  .rev-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px;}
+  button.btn-ghost{background:none;color:var(--dark);}
+  button.btn-primary:disabled{opacity:.6;cursor:default;}
+
+  .rev-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:0.85rem;color:#6b604d;gap:12px;flex-wrap:wrap;}
+  .rev-toolbar select{border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:3px;font-family:'Jost',sans-serif;font-size:0.85rem;color:var(--ink);}
+  .rev-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px 26px;margin-bottom:16px;}
+  .rev-card-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:10px;flex-wrap:wrap;}
+  .rev-name{font-weight:500;color:var(--dark);}
+  .rev-meta{font-size:0.78rem;color:#8a7f6d;}
+  .rev-text{font-size:0.95rem;color:#3c3223;white-space:pre-line;overflow-wrap:anywhere;}
+  .rev-empty{text-align:center;padding:48px 20px;color:#7a6f5b;background:#fff;border:1px dashed var(--line);border-radius:10px;}
+  .rev-more{display:block;margin:8px auto 0;}
+
+  .benefits-line{font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;line-height:1.4;color:var(--dark);text-align:center;margin:48px auto 0;max-width:660px;padding:20px 8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .benefits-note{text-align:center;font-size:0.78rem;color:#7a6f5b;margin:16px auto 0;max-width:640px;}
+  .infographic-wrap img{max-width:min(520px,100%);}
+
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
   .reveal.in{opacity:1;transform:none;}
 
@@ -195,6 +255,10 @@
     .foot-grid{grid-template-columns:1fr 1fr;}
     .trust .wrap{justify-content:center;text-align:center;}
     section{padding:64px 0;}
+    .rev-layout{grid-template-columns:1fr;gap:28px;}
+    .rev-summary{position:static;}
+    .field-row{grid-template-columns:1fr;gap:0;}
+    .rev-form{padding:22px;}
   }
 </style>
 </head>
@@ -209,6 +273,7 @@
       <a href="#benefits">Benefits</a>
       <a href="#ingredients">Ingredients</a>
       <a href="#shop">Shop</a>
+      <a href="#reviews">Reviews</a>
       <a href="#about">About</a>
     </div>
     <div class="navright">
@@ -293,6 +358,8 @@
         <h4>Suitable for all hair types</h4>
       </div>
     </div>
+    <p class="benefits-line reveal">Traditional herbal care for thinning hair and alopecia concerns*</p>
+    <p class="benefits-note">*Cherish is a cosmetic herbal hair oil, not a medicine, and is not intended to diagnose, treat or cure any condition. Results vary from person to person. If you have medical hair loss, please consult a doctor.</p>
   </div>
 </section>
 
@@ -416,6 +483,82 @@
       <div class="howto-step reveal"><div class="num">1</div><h4>Apply</h4><p>Section your hair and apply oil directly to the scalp and lengths.</p></div>
       <div class="howto-step reveal"><div class="num">2</div><h4>Massage</h4><p>Gently massage in circular motions to boost circulation.</p></div>
       <div class="howto-step reveal"><div class="num">3</div><h4>Leave &amp; Wash</h4><p>Leave for at least 1 hour, or overnight, then wash with a mild shampoo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Reviews</div>
+      <h2>Loved by Our <em>Customers</em></h2>
+    </div>
+
+    <div class="rev-layout">
+      <aside class="rev-summary reveal" aria-label="Review summary">
+        <div class="rev-avg" id="revAvg">&ndash;</div>
+        <div id="revAvgStars"></div>
+        <div class="rev-count" id="revCount">No reviews yet</div>
+        <div class="rev-bars" id="revBars"></div>
+        <button type="button" class="btn-primary" id="revWriteBtn" aria-expanded="false" aria-controls="revForm">Write a review</button>
+      </aside>
+
+      <div class="rev-main">
+        <div class="rev-notice" id="revNotice" style="display:none;">Preview mode: reviews are saved only in this browser until a review backend is connected (see REVIEWS_API_URL in the page script).</div>
+        <div class="rev-msg" id="revMsg" role="status" aria-live="polite"></div>
+
+        <form class="rev-form" id="revForm" novalidate>
+          <h3>Share your experience</h3>
+          <p class="hint">Your name and review will be shown publicly. Please share your own experience only, without phone numbers or medical advice.</p>
+
+          <div class="field">
+            <span class="lbl" id="revRatingLbl">Your rating *</span>
+            <div class="star-input" role="radiogroup" aria-labelledby="revRatingLbl"><input type="radio" name="revRating" id="rs5" value="5"><label for="rs5" title="5 stars">&#9733;</label><input type="radio" name="revRating" id="rs4" value="4"><label for="rs4" title="4 stars">&#9733;</label><input type="radio" name="revRating" id="rs3" value="3"><label for="rs3" title="3 stars">&#9733;</label><input type="radio" name="revRating" id="rs2" value="2"><label for="rs2" title="2 stars">&#9733;</label><input type="radio" name="revRating" id="rs1" value="1"><label for="rs1" title="1 star">&#9733;</label></div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="lbl" for="revName">Your name *</label>
+              <input type="text" id="revName" maxlength="60" autocomplete="name">
+            </div>
+            <div class="field">
+              <label class="lbl" for="revSize">Size you used</label>
+              <select id="revSize">
+                <option value="">Optional</option>
+                <option value="100ml">100ml</option>
+                <option value="200ml">200ml</option>
+                <option value="500ml">500ml</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="lbl" for="revText">Your review *</label>
+            <textarea id="revText" maxlength="800" placeholder="How long have you used it, and what changes have you noticed?"></textarea>
+            <div class="count" id="revChars">0 / 800</div>
+          </div>
+
+          <div class="hp" aria-hidden="true"><label>Website <input type="text" id="revWebsite" tabindex="-1" autocomplete="off"></label></div>
+
+          <div class="rev-actions">
+            <button type="submit" class="btn-primary" id="revSubmit">Post review</button>
+            <button type="button" class="btn-ghost" id="revCancel">Cancel</button>
+          </div>
+        </form>
+
+        <div class="rev-toolbar">
+          <span id="revToolbarCount"></span>
+          <label>Sort by
+            <select id="revSort">
+              <option value="new">Newest</option>
+              <option value="high">Highest rated</option>
+              <option value="low">Lowest rated</option>
+            </select>
+          </label>
+        </div>
+        <div id="revList"></div>
+        <button type="button" class="btn-ghost rev-more" id="revMore" style="display:none;">Show more reviews</button>
+      </div>
     </div>
   </div>
 </section>
@@ -660,6 +803,275 @@
     document.getElementById('nmsg').textContent = "Thanks! We'll send your 10% code to " + email;
     document.getElementById('nemail').value = '';
   });
+
+
+  /* ---------------- REVIEWS ---------------- */
+  // To let EVERY visitor see each other's reviews, paste the web-app URL from reviews-backend.gs here.
+  // While this is empty the page runs in preview mode: reviews are stored only in the visitor's own browser.
+  var REVIEWS_API_URL = "";
+  var REVIEWS_KEY = "cherish_reviews_v1";
+  var REVIEWS_LAST_KEY = "cherish_last_review_at";
+  var REV_PAGE = 5;
+  var reviews = [];
+  var revShown = REV_PAGE;
+  var memoryReviews = [];
+
+  function revEl(tag, cls, text){
+    var n = document.createElement(tag);
+    if(cls) n.className = cls;
+    if(text !== undefined && text !== null) n.textContent = text;
+    return n;
+  }
+  function revById(id){ return document.getElementById(id); }
+
+  function localLoad(){
+    try { return JSON.parse(localStorage.getItem(REVIEWS_KEY) || "[]"); }
+    catch(e){ return memoryReviews; }
+  }
+  function localSave(list){
+    memoryReviews = list;
+    try { localStorage.setItem(REVIEWS_KEY, JSON.stringify(list)); } catch(e){}
+  }
+
+  function cleanReview(r){
+    var rating = Math.round(Number(r && r.rating));
+    if(!(rating >= 1 && rating <= 5)) return null;
+    var text = String((r && r.text) || "").trim();
+    if(!text) return null;
+    return {
+      name: String((r && r.name) || "Customer").slice(0, 60),
+      rating: rating,
+      size: String((r && r.size) || "").slice(0, 10),
+      text: text.slice(0, 800),
+      date: (r && r.date) || ""
+    };
+  }
+
+  function starsNode(rating){
+    var s = revEl("span", "stars");
+    var shown = Math.round(rating * 10) / 10;
+    s.setAttribute("role", "img");
+    s.setAttribute("aria-label", shown + " out of 5 stars");
+    var fill = revEl("span", "fill");
+    fill.style.width = (Math.max(0, Math.min(5, rating)) / 5 * 100) + "%";
+    s.appendChild(fill);
+    return s;
+  }
+
+  function formatReviewDate(d){
+    var t = new Date(d);
+    if(isNaN(t.getTime())) return "";
+    return t.toLocaleDateString("en-IN", {day:"numeric", month:"short", year:"numeric"});
+  }
+
+  function renderSummary(){
+    var n = reviews.length, sum = 0, dist = {1:0,2:0,3:0,4:0,5:0};
+    reviews.forEach(function(r){ sum += r.rating; dist[r.rating]++; });
+    var avg = n ? sum / n : 0;
+
+    revById("revAvg").textContent = n ? avg.toFixed(1) : "\u2013";
+    var starWrap = revById("revAvgStars");
+    starWrap.innerHTML = "";
+    starWrap.appendChild(starsNode(avg));
+    revById("revCount").textContent = n ? ("Based on " + n + " review" + (n === 1 ? "" : "s")) : "No reviews yet";
+
+    var bars = revById("revBars");
+    bars.innerHTML = "";
+    for(var star = 5; star >= 1; star--){
+      var row = revEl("div", "rev-bar");
+      row.appendChild(revEl("span", "lab", star + " \u2605"));
+      var track = revEl("span", "track");
+      var bar = document.createElement("i");
+      bar.style.width = (n ? dist[star] / n * 100 : 0) + "%";
+      track.appendChild(bar);
+      row.appendChild(track);
+      row.appendChild(revEl("span", "n", String(dist[star])));
+      bars.appendChild(row);
+    }
+  }
+
+  function sortedReviews(){
+    var mode = revById("revSort").value;
+    var list = reviews.slice();
+    function time(r){ var t = new Date(r.date).getTime(); return isNaN(t) ? 0 : t; }
+    if(mode === "high") list.sort(function(a,b){ return b.rating - a.rating || time(b) - time(a); });
+    else if(mode === "low") list.sort(function(a,b){ return a.rating - b.rating || time(b) - time(a); });
+    else list.sort(function(a,b){ return time(b) - time(a); });
+    return list;
+  }
+
+  function renderList(){
+    var box = revById("revList");
+    box.innerHTML = "";
+    var n = reviews.length;
+    revById("revToolbarCount").textContent = n ? (n + " review" + (n === 1 ? "" : "s")) : "";
+    if(!n){
+      box.appendChild(revEl("div", "rev-empty", "No reviews yet. Be the first to share how Cherish works for you."));
+      revById("revMore").style.display = "none";
+      return;
+    }
+    var list = sortedReviews();
+    list.slice(0, revShown).forEach(function(r){
+      var card = revEl("article", "rev-card");
+      var top = revEl("div", "rev-card-top");
+      var who = revEl("div");
+      who.appendChild(revEl("div", "rev-name", r.name));
+      var meta = [];
+      if(r.size) meta.push(r.size + " bottle");
+      var d = formatReviewDate(r.date);
+      if(d) meta.push(d);
+      if(meta.length) who.appendChild(revEl("div", "rev-meta", meta.join(" \u2022 ")));
+      top.appendChild(who);
+      top.appendChild(starsNode(r.rating));
+      card.appendChild(top);
+      card.appendChild(revEl("p", "rev-text", r.text));
+      box.appendChild(card);
+    });
+    revById("revMore").style.display = list.length > revShown ? "block" : "none";
+  }
+
+  function renderReviews(){ renderSummary(); renderList(); }
+
+  function showRevMsg(kind, text){
+    var m = revById("revMsg");
+    m.className = "rev-msg " + kind;
+    m.textContent = text;
+  }
+  function clearRevMsg(){
+    var m = revById("revMsg");
+    m.className = "rev-msg";
+    m.textContent = "";
+  }
+
+  function loadReviews(){
+    if(!REVIEWS_API_URL){
+      revById("revNotice").style.display = "block";
+      reviews = localLoad().map(cleanReview).filter(Boolean);
+      renderReviews();
+      return;
+    }
+    fetch(REVIEWS_API_URL)
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        reviews = ((d && d.reviews) || []).map(cleanReview).filter(Boolean);
+        renderReviews();
+      })
+      .catch(function(){
+        reviews = [];
+        renderReviews();
+        showRevMsg("err", "Couldn't load reviews right now. Please refresh the page to try again.");
+      });
+  }
+
+  function openRevForm(open){
+    var form = revById("revForm");
+    var btn = revById("revWriteBtn");
+    if(open){
+      form.classList.add("open");
+      btn.setAttribute("aria-expanded", "true");
+      clearRevMsg();
+      form.scrollIntoView({behavior:"smooth", block:"center"});
+      setTimeout(function(){ revById("revName").focus({preventScroll:true}); }, 350);
+    } else {
+      form.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  function selectedRating(){
+    var picked = document.querySelector('input[name="revRating"]:checked');
+    return picked ? Number(picked.value) : 0;
+  }
+
+  function resetRevForm(){
+    revById("revForm").reset();
+    revById("revChars").textContent = "0 / 800";
+  }
+
+  function submitReview(e){
+    e.preventDefault();
+    clearRevMsg();
+
+    var payload = {
+      name: revById("revName").value.trim(),
+      rating: selectedRating(),
+      size: revById("revSize").value,
+      text: revById("revText").value.trim(),
+      website: revById("revWebsite").value
+    };
+
+    if(!payload.rating){ showRevMsg("err", "Choose a star rating before posting."); return; }
+    if(!payload.name){ showRevMsg("err", "Enter your name so we can show who wrote the review."); revById("revName").focus(); return; }
+    if(payload.text.length < 10){ showRevMsg("err", "Write at least 10 characters about your experience."); revById("revText").focus(); return; }
+
+    var last = 0;
+    try { last = Number(localStorage.getItem(REVIEWS_LAST_KEY)) || 0; } catch(err){}
+    if(Date.now() - last < 60000){ showRevMsg("err", "You just posted a review. Please wait a minute before posting another."); return; }
+
+    if(payload.website){ // honeypot filled in: pretend success, send nothing
+      resetRevForm(); openRevForm(false);
+      showRevMsg("ok", "Thank you for your review!");
+      return;
+    }
+
+    var submitBtn = revById("revSubmit");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Posting\u2026";
+
+    function done(){ submitBtn.disabled = false; submitBtn.textContent = "Post review"; }
+    function stamp(){ try { localStorage.setItem(REVIEWS_LAST_KEY, String(Date.now())); } catch(err){} }
+
+    if(!REVIEWS_API_URL){
+      var list = localLoad();
+      var mine = cleanReview({name:payload.name, rating:payload.rating, size:payload.size, text:payload.text, date:new Date().toISOString()});
+      list.unshift(mine);
+      localSave(list);
+      reviews = list.map(cleanReview).filter(Boolean);
+      stamp(); done(); resetRevForm(); openRevForm(false); renderReviews();
+      showRevMsg("ok", "Thank you! Your review has been added.");
+      return;
+    }
+
+    fetch(REVIEWS_API_URL, {
+      method: "POST",
+      headers: {"Content-Type": "text/plain;charset=utf-8"},
+      body: JSON.stringify({name:payload.name, rating:payload.rating, size:payload.size, text:payload.text, website:""})
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      done();
+      if(d && d.ok){
+        stamp(); resetRevForm(); openRevForm(false);
+        if(d.pending){
+          showRevMsg("ok", "Thank you! Your review has been received and will appear once it has been approved.");
+        } else {
+          showRevMsg("ok", "Thank you! Your review has been posted.");
+          loadReviews();
+        }
+      } else {
+        showRevMsg("err", "We couldn't post your review. Check your answers and try again.");
+      }
+    })
+    .catch(function(){
+      done();
+      showRevMsg("err", "We couldn't post your review because of a connection problem. Please try again, or send it to us on WhatsApp.");
+    });
+  }
+
+  function initReviews(){
+    revById("revWriteBtn").addEventListener("click", function(){
+      openRevForm(!revById("revForm").classList.contains("open"));
+    });
+    revById("revCancel").addEventListener("click", function(){ openRevForm(false); });
+    revById("revForm").addEventListener("submit", submitReview);
+    revById("revText").addEventListener("input", function(){
+      revById("revChars").textContent = this.value.length + " / 800";
+    });
+    revById("revSort").addEventListener("change", function(){ revShown = REV_PAGE; renderList(); });
+    revById("revMore").addEventListener("click", function(){ revShown += REV_PAGE; renderList(); });
+    loadReviews();
+  }
+  initReviews();
 
   var observer = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('in'); } });
